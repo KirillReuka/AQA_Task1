@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class Task1 {
     public static void task1() {
-        //        Fill the array with data (random). Print out. Replace all negative values with 0. Print.
+        System.out.println("Task 1");
+        System.out.println("Fill the array with data (random). Print out. Replace all negative values with 0. Print.");
         Random random = new Random();
         int[] arr = new int[10];
 
