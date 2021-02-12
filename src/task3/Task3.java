@@ -6,37 +6,44 @@ public class Task3 {
         System.out.println("Task 3");
         System.out.println("The user enters the values of two variables. The program implements the basic mathematical operations on these variables (+ - * / %).");
         Scanner scanner = new Scanner(System.in);
+        boolean input = true;
 
-        System.out.println("Enter a: ");
-        int a = scanner.nextInt();
-        System.out.println("Enter b: ");
-        int b = scanner.nextInt();
-        System.out.println("Enter operation: ");
-        char op = scanner.next().charAt(0);
+        while(input) {
+            System.out.println("Enter a: ");
+            int a = scanner.nextInt();
+            System.out.println("Enter b: ");
+            int b = scanner.nextInt();
+            System.out.println("Enter operation: ");
+            System.out.println("Exit - 0");
+            char op = scanner.next().charAt(0);
 
-        switch (op) {
-            case '+':
-                System.out.println(a + b);
-                break;
-            case '-':
-                System.out.println(a - b);
-                break;
-            case '*':
-                System.out.println(a * b);
-                break;
-            case '/':
-                if (b == 0) {
-                    System.out.println("Division by 0");
-                } else {
-                    System.out.println(a / b);
+            switch (op) {
+                case '+':
+                    System.out.println(a + b);
                     break;
-                }
-                break;
-            case '%':
-                System.out.println(a % b);
-                break;
-            default:
-                System.out.println("Unknown operation");
+                case '-':
+                    System.out.println(a - b);
+                    break;
+                case '*':
+                    System.out.println(a * b);
+                    break;
+                case '/':
+                    if (b == 0) {
+                        System.out.println("Division by 0");
+                    } else {
+                        System.out.println(a / b);
+                        break;
+                    }
+                    break;
+                case '%':
+                    System.out.println(a % b);
+                    break;
+                case '0':
+                    input = false;
+                    break;
+                default:
+                    System.out.println("Unknown operation");
+            }
         }
     }
 }

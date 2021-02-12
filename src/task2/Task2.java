@@ -11,7 +11,7 @@ public class Task2 {
         try {
             System.out.println("Enter number of lines: ");
             int n = scanner.nextInt();
-            int len = 0;
+            double len = 0;
             for (int i = 0; i < n; i++) {
                 System.out.println("Enter line: ");
                 String s = scanner.next();
